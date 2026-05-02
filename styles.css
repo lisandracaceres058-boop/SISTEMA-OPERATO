@@ -1,0 +1,61 @@
+.memory-block {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: top;
+}
+
+.memory-block.compacting {
+    animation: compactMove 0.8s ease-in-out;
+}
+
+@keyframes compactMove {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); opacity: 0.8; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.free-block {
+    background: linear-gradient(135deg, #e5e7eb 0%, #f3f4f6 100%);
+    border: 2px dashed #9ca3af;
+}
+
+.occupied-block {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    border: 2px solid #1e40af;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(239, 68, 68, 0.3);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+}
